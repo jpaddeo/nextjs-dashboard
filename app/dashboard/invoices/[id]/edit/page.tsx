@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+
 import { notFound } from 'next/navigation';
 
 import Form from '@/app/ui/invoices/edit-form';
@@ -9,6 +11,11 @@ type DashboardInvoicesEditPageProps = {
   params: {
     id: string;
   };
+};
+
+export const metadata: Metadata = {
+  title: 'Edit Invoice',
+  description: 'Edit invoice.',
 };
 
 export default async function DashboardInvoicesEditPage({
